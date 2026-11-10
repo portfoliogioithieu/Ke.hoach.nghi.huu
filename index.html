@@ -362,10 +362,17 @@ function calculate(){
     saleLines.push({name:a.name,amount:a.value});
    }
   });
-  const investmentReturn=beginningBalance*r;
   const annualIncome=monthlyIncome*12;
   const annualExpense=(livingExpense+specialCostMonthly)*12;
+
+// Dòng tiền trước khi tính lãi/lợi suất
+  const cashFlowBeforeReturn=annualIncome+assetSale-annualExpense;
+
+// Nếu dòng tiền âm thì không có lãi suất trong năm đó
+  const investmentReturn=cashFlowBeforeReturn>=0?beginningBalance*r:0;
+
   const annualNet=annualIncome+assetSale+investmentReturn-annualExpense;
+  cash=beginningBalance+annualNet;
   cash=beginningBalance+annualNet;
   if(cash<minCash)minCash=cash;
   if(cash<0&&deplete===null)deplete=age;
