@@ -12,8 +12,17 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- iPhone / PWA -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kế hoạch nghỉ hưu">
+<meta name="theme-color" content="#2563eb">
+<link rel="apple-touch-icon" href="icon.png">
+
 <title>Kế hoạch nghỉ hưu cá nhân</title>
-</script><style>
+<style>
 :root{--bg:#f4f7fb;--surface:#fff;--surface2:#f8fafc;--line:#e2e8f0;--text:#0f172a;--muted:#64748b;--accent:#2563eb;--accent2:#1d4ed8;--good:#16a34a;--bad:#dc2626;--warn:#d97706;--shadow:0 8px 24px rgba(15,23,42,.08)}
 *{box-sizing:border-box}html{font-size:17px}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -147,6 +156,22 @@ canvas{width:100%;height:300px;background:#fff;border-radius:14px;border:1px sol
 <li>Nên thử nhiều kịch bản: lạm phát cao hơn, lợi suất thấp hơn, chi phí y tế lớn hơn.</li>
 <li>Cập nhật hồ sơ khi thu nhập, chi tiêu hoặc kế hoạch gia đình thay đổi.</li>
 </ul>
+
+<h3>Thêm app vào màn hình chính iPhone</h3>
+<div class="example">
+  <b>Cách thêm “Kế hoạch nghỉ hưu” vào Màn hình chính iPhone:</b>
+  <ol style="margin:10px 0 0 20px; padding:0;">
+    <li>Mở file HTML này bằng <b>Safari</b> trên iPhone.</li>
+    <li>Bấm nút <b>Chia sẻ</b> — hình vuông có mũi tên hướng lên.</li>
+    <li>Cuộn xuống và chọn <b>“Thêm vào Màn hình chính”</b>.</li>
+    <li>Đặt tên, ví dụ: <b>“Kế hoạch nghỉ hưu”</b>.</li>
+    <li>Bấm <b>Thêm</b>.</li>
+  </ol>
+  <p style="margin-top:10px;">
+    Icon sẽ xuất hiện trên Màn hình chính. Khi mở từ icon này, app chạy gần như toàn màn hình và không hiển thị thanh địa chỉ Safari.
+  </p>
+</div>
+
 </div>
 <div class="actions"><button onclick="switchTab('info')">Bắt đầu nhập thông tin →</button></div>
 </div>
